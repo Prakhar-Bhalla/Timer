@@ -15,6 +15,10 @@ export const Timer = () => {
     }
     
     const startClock = () => {
+        if(isNaN(timeSpan.Start) || isNaN(timeSpan.End))
+        {
+            return setIsWrong(true);
+        }
         setFlag(false);
         setIsWrong(false);
         if(timeSpan.Start > timeSpan.End)
