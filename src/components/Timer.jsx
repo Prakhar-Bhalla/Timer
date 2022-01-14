@@ -35,7 +35,7 @@ export const Timer = () => {
         }, 1000)
     }
 
-    return <div style={{margin : "20px 0"}}>{flag && <p style={{color : "red"}}>Time up!</p>}{isWrong && <p style={{color : "red"}}>Invalid input!</p>}Counter : <input style={{width : "20px", textAlign : "center", outline : "none", border : "2px solid brown"}} readOnly="readOnly" value={clockSec}/>
+    return <div style={{margin : "20px 0"}}>{flag && <p style={{color : "red"}}>Time up!</p>}{isWrong && <p style={{color : "red"}}>Invalid input!</p>}Counter : <input style={{width : "35px", textAlign : "center", outline : "none", border : "2px solid brown"}} readOnly="readOnly" value={clockSec}/>
         <div style={{margin : "15px 0"}}>
         <input placeholder="Start time" onChange={setTime} style={{width : "65px", textAlign : "center", outline : "none", border : "2px solid green", margin : "0 5px"}} name="Start"/>
         <input placeholder="End time" onChange={setTime} style={{width : "65px", textAlign : "center", outline : "none", border : "2px solid red", margin : "0 5px"}} name="End"/>
