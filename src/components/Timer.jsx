@@ -14,6 +14,7 @@ export const Timer = () => {
     }
     
     const startClock = () => {
+        setFlag(false);
         setClockSec(timeSpan.Start)
         let id = setInterval(() => {
             setClockSec(p => {
