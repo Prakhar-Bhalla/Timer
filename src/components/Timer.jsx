@@ -15,12 +15,15 @@ export const Timer = () => {
     }
     
     const startClock = () => {
+        setFlag(false);
         if(isNaN(timeSpan.Start) || isNaN(timeSpan.End))
         {
             return setIsWrong(true);
         }
-        setFlag(false);
-        setIsWrong(false);
+        if(isWrong)
+        {
+            setIsWrong(false);
+        }
         if(timeSpan.Start > timeSpan.End)
         {
             setClockSec("");
