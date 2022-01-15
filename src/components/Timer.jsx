@@ -16,7 +16,7 @@ export const Timer = () => {
     
     const startClock = () => {
         setFlag(false);
-        if(isNaN(timeSpan.Start) || isNaN(timeSpan.End))
+        if(isNaN(timeSpan.Start) || isNaN(timeSpan.End) || timeSpan.Start > timeSpan.End)
         {
             setClockSec("");
             return setIsWrong(true);
@@ -24,11 +24,6 @@ export const Timer = () => {
         if(isWrong)
         {
             setIsWrong(false);
-        }
-        if(timeSpan.Start > timeSpan.End)
-        {
-            setClockSec("");
-            return setIsWrong(true);
         }
         setClockSec(timeSpan.Start)
         let id = setInterval(() => {
